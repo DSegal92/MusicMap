@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :genre %><br />
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {:include_blank => true, :default => '-'})%>
+  </div>
 
 
   <div class="field">

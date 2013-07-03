@@ -1,4 +1,7 @@
 MusicMap::Application.routes.draw do
+  resources :genres
+
+
   resources :artists
 
 
