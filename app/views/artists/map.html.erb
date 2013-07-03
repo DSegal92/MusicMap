@@ -1,34 +1,7 @@
-
-<!DOCTYPE html>
-<meta charset="utf-8">
-<script src="http://d3js.org/d3.v2.js?2.9.1"></script>
-<style>
-
-.link {
-  fill: none;
-  stroke: #666;
-  stroke-width: 1.5px;
-}
-
-.node circle {
-  fill: #ccc;
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-text {
-  font: 10px sans-serif;
-  pointer-events: none;
-}
-
-</style>
-<body>
-
-  
 <script>
 var width = 1920,
     height = 1080;
-    
+
 var color = d3.scale.category20();
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -39,8 +12,7 @@ var svg = d3.select("body").append("svg")
 <% end %>
 
 
-var json = /* <%= raw(@myInMemoryObject) %> */ {
-    
+var json = {    
     "nodes":[
       <% @artists.each do |a| %>
         <%= 'node'+(a.id).to_s+',' %>
@@ -58,7 +30,7 @@ var json = /* <%= raw(@myInMemoryObject) %> */ {
 
 var force = d3.layout.force()
     .gravity(.05)
-    .distance(100)
+    .distance(125)
     .charge(-100)
     .size([width, height]);
 
@@ -86,6 +58,7 @@ node.append("circle")
   node.append("text")
       .attr("dx", 12)
       .attr("dy", ".35em")
+      .style("fill", function(d) { return '#fff'; })
       .text(function(d) { return d.name });
 
   force.on("tick", function() {
@@ -96,5 +69,4 @@ node.append("circle")
 
     node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   });
-
-</script>
+  </script>
