@@ -11,19 +11,13 @@ class ArtistsController < ApplicationController
   end
   def map
     @artists = Artist.all
-
-  end
-
-  # GET /artists/1
-  # GET /artists/1.json
-  def show
-    @artist = Artist.find(params[:id])
-
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @artist }
+      format.html # index.html.erb
+      format.json { render json: @artists }
     end
   end
+
+
 
   # GET /artists/new
   # GET /artists/new.json
@@ -48,7 +42,7 @@ class ArtistsController < ApplicationController
    
     respond_to do |format|
       if @artist.save
-        format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
+        format.html { redirect_to "/artists" , notice: 'Artist was successfully created.' }
         format.json { render json: @artist, status: :created, location: @artist }
       else
         format.html { render action: "new" }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+
 .link {
   fill: none;
   stroke: #666;
@@ -16,6 +18,38 @@
   pointer-events: none;
 }
 
-.header h1 {
-	color: #F1C40F;
+body {
+
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.231;
+}
+input,
+button,
+select,
+textarea {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.inline li {display: inline;}
+
+
+#homeNav {
+  font-size: 36px;
+  margin-right: 720px;
+  margin-left: -35px;
+}
+
+.navLinks {
+  font-size: 18px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.new_message{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
