@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :artists
+  has_many :genres
+  
   attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password
