@@ -2,13 +2,21 @@
 #home_links > ul {
   margin-left: 128px;
   list-style-type: none;
-}
 
+}
+#welcome{
+  color: black;
+  border: 7px solid black;
+}
 #home_links > ul > li { 
+
   display: inline;
   margin-right: 98px;
 }
 
+#home_links a{
+    color: black;
+}
 
 #sign_up{
   margin-left: 50%;
