@@ -1,0 +1,57 @@
+#welcome{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  width: 600px;
+  font-size: 36px;
+  color: black;
+  border: 8px solid black;
+  text-align: center;
+}
+
+#home_links a{
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+
+}
+
+#home_links a:hover{
+  color: #c4273c;
+}
+
+#home_links > ul {
+  margin-left: 128px;
+  list-style-type: none;
+}
+
+#home_links > ul > li { 
+  display: inline;
+  margin-right: 98px;
+}
+
+#sign_up{
+  margin-left: 50%;
+  margin-right: auto;
+  font-size: 75px;
+}
+
+#user_nav{
+  display: none;
+}
+
+.sign_up h1{
+  font-size: 60px;
+  text-align: center;
+}
+
+.sign_up a{
+  font-size: 70px;
+  margin-left: 10%;
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  color: #c4273c;
+}

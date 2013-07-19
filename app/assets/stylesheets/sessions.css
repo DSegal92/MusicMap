@@ -1,0 +1,30 @@
+.fields{
+	font-size: 40px;
+	text-align: center;
+}
+
+#email{
+	font-size: 40px;
+}
+
+#password{
+	font-size: 40px;
+}
+
+
+.submit{
+	font-family: "Lato", sans-serif;
+	font-size: 40px;
+	color: black; 
+	background-color: #FFF; 
+}
+
+#user_nav{
+	display: none;
+}
+
+.notice{
+	font-size: 24px;
+	text-align: center;
+	color: #c4273c;
+}

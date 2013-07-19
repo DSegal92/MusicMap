@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 
+<<<<<<< Updated upstream
 body{
   background: url("/assets/background.png");
   background-size: 100%;
@@ -42,6 +43,14 @@ body{
 
 
 
+=======
+
+.sign_up h1{
+  font-size: 60px;
+  text-align: center;
+}
+
+>>>>>>> Stashed changes
 .link {
   fill: none;
   stroke: #666;

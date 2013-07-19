@@ -1,0 +1,12 @@
+.fields{
+	font-size: 40px;
+	text-align: center;
+}
+
+ul li{
+	list-style-type: none;
+}
+
+#user_email, #user_password, #user_password_confirmation{
+	font-size: 40px;
+}

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/assets/sessions.css">
+
+<div class="sign_up">
+	<h1>Log in</h1>
+</div>
+<div class="notice">
+      		<%= flash[:notice] %>   			
+ </div>
+<%= form_tag sessions_path do %>
+	<p>
+		<div class="fields">
+				<%= label_tag :email %><br />
+		<%= text_field_tag :email, params[:email] %>
+	
+	
+	</p>
+		<p>
+		<%= label_tag :password %><br />
+		<%= password_field_tag :password %>
+	</p>
+
+	<input type="submit" class="submit" value=" Submit ">
+<% end %>
