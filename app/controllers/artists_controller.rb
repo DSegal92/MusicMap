@@ -56,7 +56,7 @@ class ArtistsController < ApplicationController
   # PUT /artists/1
   # PUT /artists/1.json
   def update
-    @artist = current_user.tasks.find(params[:id])
+    @artist = current_user.artists.find(params[:id])
     @artist.update_attributes!(params[:artist])
     respond_to do |format|
       if @artist.update_attributes(params[:artist])
