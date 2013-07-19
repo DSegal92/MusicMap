@@ -23,7 +23,7 @@
   </div>
 
     Related Artists:
-  <% for artist in Artist.find(:all) %>
+  <% for artist in current_user.artists %>
 <div>
   <%= check_box_tag "artist[artist_ids][]", artist.id, @artist.artists.include?(artist) %>
   <%= artist.name %>

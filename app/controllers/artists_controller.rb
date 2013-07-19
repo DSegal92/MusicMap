@@ -2,7 +2,9 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all 
+    if current_user
+      @artists = current_user.artists
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -38,7 +40,7 @@ class ArtistsController < ApplicationController
   # POST /artists
   # POST /artists.json
   def create
-    @artist = Artist.new(params[:artist])
+    @artist = current_user.artists.create!(params[:artist])
    
     respond_to do |format|
       if @artist.save
@@ -54,8 +56,8 @@ class ArtistsController < ApplicationController
   # PUT /artists/1
   # PUT /artists/1.json
   def update
-    @artist = Artist.find(params[:id])
-
+    @artist = current_user.tasks.find(params[:id])
+    @artist.update_attributes!(params[:artist])
     respond_to do |format|
       if @artist.update_attributes(params[:artist])
         format.html { redirect_to @artist, notice: 'Artist was successfully updated.' }
@@ -70,7 +72,7 @@ class ArtistsController < ApplicationController
   # DELETE /artists/1
   # DELETE /artists/1.json
   def destroy
-    @artist = Artist.find(params[:id])
+    @artist = current_user.artists.find(params[:id])
     @artist.destroy
 
     respond_to do |format|

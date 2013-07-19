@@ -1,16 +1,31 @@
+<<<<<<< HEAD
+=======
+body{
+  background: url("/assets/background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 #welcome{
   margin-left: auto;
   margin-right: auto;
   margin-top: 25%;
   width: 600px;
   font-size: 36px;
+<<<<<<< HEAD
   color: black;
   border: 8px solid black;
+=======
+  color: white;
+  border: 8px solid white;
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
   text-align: center;
 }
 
 #home_links a{
   text-decoration: none;
+<<<<<<< HEAD
   color: black;
   font-size: 50px;
 
@@ -18,6 +33,10 @@
 
 #home_links a:hover{
   color: #c4273c;
+=======
+  color: white;
+  font-size: 50px;
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 }
 
 #home_links > ul {
@@ -30,6 +49,7 @@
   margin-right: 98px;
 }
 
+<<<<<<< HEAD
 #sign_up{
   margin-left: 50%;
   margin-right: auto;
@@ -55,3 +75,5 @@
 a:hover{
   color: #c4273c;
 }
+=======
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73

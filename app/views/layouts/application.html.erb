@@ -10,8 +10,11 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 <div id="user_nav">
 	<% if current_user %>
 		Logged in as <%= current_user.email %>.
@@ -22,7 +25,14 @@
 	<% end %>
 	
 </div>
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+
+<% flash.each do |name, msg| %>
+	<%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 
 <div class="container_16">
 	

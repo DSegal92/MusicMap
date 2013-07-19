@@ -20,4 +20,5 @@ class Artist < ActiveRecord::Base
               :source         => :related_artist
 
   belongs_to :genre
+  belongs_to :user
 end

@@ -1,0 +1,86 @@
+<div class="map_left">
+</div>
+<% if @artists.empty? %>
+<div class="new_message">
+  <h1>Welcome to Music Map</h1>
+  <p> Before your artists map can be generated, you need to add some genres and artists.  <p>
+    <ol>
+      <li>Click "Genres" and add as many as you want (you can add more later)
+      <li>Click "Artists" and add some of those too
+      <li>A web of connected artists, with genres grouped by color, will be generated when you return to this page
+    </ol>
+</div>
+
+<% end %>
+<script>
+var width = window.innerWidth;
+    height = window.innerHeight;
+
+var color = d3.scale.category20();
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+<% @artists.each do |a| %>
+        <%= raw 'var node'+a.id.to_s + '= {"name": "' + a.name + '", "id":' + a.id.to_s + ', "genre":' + a.genre.id.to_s + ', "size":' + ((a.related_artists.count + 5) * 2).to_s + '};' %>    
+<% end %>
+
+
+var json = {    
+    "nodes":[
+      <% @artists.each do |a| %>
+        <%= 'node'+(a.id).to_s+',' %>
+    <% end %>
+
+    ],
+"links":[
+    <% @artists.each do |a| %>     
+        <% a.related_artists.each do |b| %>
+          <%= raw '{"source":' + 'node'+(a.id).to_s + ', "target":' +  'node'+(b.id).to_s + ',"value":1},' %>
+        <% end %>
+    <% end %>   
+    ]
+}
+
+var force = d3.layout.force()
+    .gravity(.05)
+    .distance(125)
+    .charge(-100)
+    .size([width, height]);
+
+
+  force
+      .nodes(json.nodes)
+      .links(json.links)
+      .start();
+
+  var link = svg.selectAll(".link")
+      .data(json.links)
+    .enter().append("line")
+      .attr("class", "link");
+
+  var node = svg.selectAll(".node")
+      .data(json.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .call(force.drag);
+
+node.append("circle")
+    .attr("r", function(d) { return d.size })
+    .style("fill", function(d) { return color(d.genre); });
+
+  node.append("text")
+      .attr("dx", 12)
+      .attr("dy", ".35em")
+      //.style("fill", function(d) { return '#fff'; })
+      .text(function(d) { return d.name });
+
+  force.on("tick", function() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
+  </script>

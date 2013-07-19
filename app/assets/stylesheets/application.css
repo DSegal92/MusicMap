@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 body{
   background: url("/assets/background.png");
@@ -51,6 +52,8 @@ body{
 }
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 .link {
   fill: none;
   stroke: #666;
@@ -70,7 +73,7 @@ body{
 }
 
 body {
-
+ 
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.231;
