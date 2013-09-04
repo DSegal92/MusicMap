@@ -1,21 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-body{
-  background: url("/assets/background.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
 #welcome{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25%;
+  margin-top: 10%;
   width: 600px;
   font-size: 36px;
   color: white;
-  border: 8px solid white;
   text-align: center;
 }
 
@@ -35,25 +26,11 @@ body{
   margin-right: 98px;
 }
 
-
-
-
-
-
-
-
-
-
-=======
-
 .sign_up h1{
   font-size: 60px;
   text-align: center;
 }
 
->>>>>>> Stashed changes
-=======
->>>>>>> 10029c415763f878bdb40394be3b74e9bd85ba73
 .link {
   fill: none;
   stroke: #666;
@@ -108,4 +85,3 @@ textarea {
   width: 90%;
 }
 
-.ho
